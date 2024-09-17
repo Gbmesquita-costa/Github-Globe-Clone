@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GitHub 3D Globe Clone 🌍
 
-## Getting Started
+Este é um clone do antigo Globo 3D do GitHub, desenvolvido utilizando tecnologias modernas como Next.js, Three.js e Web Workers. O projeto simula a visualização de conexões entre cidades ao redor do mundo em um globo interativo 3D.
 
-First, run the development server:
+## ✨ Funcionalidades
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Globo 3D interativo**: Visualize um globo com mapas e conexões entre cidades usando arcos.
+- **Conexões animadas**: Exibição de arcos representando rotas entre diferentes pontos no globo.
+- **Rotação automática**: O globo pode ser configurado para girar automaticamente.
+- **Customização de cores e efeitos**: As cores do globo, arcos e atmosfera podem ser customizadas.
+- **Atmosfera ao redor do globo**: Uma camada de atmosfera que realça a visualização.
+- **Uso de Web Workers**: Processamento assíncrono para manipulação de dados complexos em segundo plano.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Tecnologias Utilizadas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Este projeto foi desenvolvido com as seguintes tecnologias:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- [Next.js](https://nextjs.org/) 14.2.6: Framework React para desenvolvimento de aplicações web modernas.
+- [React](https://reactjs.org/) 18: Biblioteca para construção de interfaces de usuário.
+- [Three.js](https://threejs.org/) 0.167.1: Biblioteca JavaScript para renderização gráfica 3D.
+- [Three-Globe](https://github.com/vasturiano/three-globe) 2.31.1: Extensão do Three.js para visualização de globos 3D.
+- [@react-three/fiber](https://github.com/pmndrs/react-three-fiber): Renderização declarativa de cenas 3D em React.
+- [@react-three/drei](https://github.com/pmndrs/drei): Utilitários e componentes adicionais para Three.js.
+- [TypeScript](https://www.typescriptlang.org/) 5: Superset do JavaScript para tipagem estática.
+- [Tailwind CSS](https://tailwindcss.com/) 3.4.1: Framework de CSS utilitário para estilização rápida.
+- **Web Workers**: Para realizar o processamento de dados pesados, como as rotas e arcos, de forma assíncrona.
 
-## Learn More
+### Passos para rodar o projeto
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone o repositório:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   git clone https://github.com/Gbmesquita-costa/Github-Globe-Clone.git
+   cd github3dglobe
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+   ```
 
-## Deploy on Vercel
+2. Instale as dependências:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npm install
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
+
+3. Execute o projeto no ambiente de desenvolvimento:
+
+   ```bash
+   npm run dev
+
+   ```
+
+4. Scripts Disponíveis
+   npm run dev: Inicia o servidor de desenvolvimento.
+   npm run build: Compila o projeto para produção.
+   npm start: Inicia o projeto compilado em modo de produção.
+   npm run lint: Verifica o código com as regras do ESLint.
+
+### 🛠 Estrutura do Código
+
+- [components/globe/globe-config.tsx]: Configurações e lógica principal para o globo 3D.
+- [data/globe.json]: Dados GeoJSON para renderização dos polígonos do globo.
+- [globe-worker.ts]: Arquivo Web Worker para processamento assíncrono das rotas e arcos.
+- [public]: Contém arquivos públicos, como imagens e ícones.
+
+### 🙏 Contribuição
+
+Se você encontrar bugs ou tiver sugestões, sinta-se à vontade para abrir uma issue ou enviar um pull request.
+
+### ⭐ Agradecimento
+
+Se este projeto te ajudou ou você achou interessante, considere dar uma ⭐ no GitHub. Sua contribuição é muito apreciada!
